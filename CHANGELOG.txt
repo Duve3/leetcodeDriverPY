@@ -8,3 +8,16 @@ Change Log
 0.0.2 (12/30/2022)
 -------------------
 - I forgot to actually make it work
+
+0.0.3 (12/31/2022)
+-------------------
+- I actually did stuff???
+- Removed legacy code.
+- Added verification to ensure that the correct parameters are filled.
+- Separated the big __init__ file into some smaller files.
+- Changed the error text from FunctionNotFound.
+- Added "optionalFunc" parameter, incase you needed to give a direct reference to your function.
+- Updated the README.md to show how to use the optionalFunc parameter.
+- Added a print statement to inform you of what function is being used.
+- Added a NotEnoughTestcases Error.
+- Added a check to confirm that len(testcases) > 1 if it fails then it raises NotEnoughTestcases.
