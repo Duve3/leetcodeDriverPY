@@ -1,0 +1,10 @@
+Change Log
+==========
+
+0.0.1 (12/30/2022)
+-------------------
+- First Release
+
+0.0.2 (12/30/2022)
+-------------------
+- I forgot to actually make it work

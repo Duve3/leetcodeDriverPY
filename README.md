@@ -11,7 +11,7 @@ want to do something like this:
 ```py
 from leetcodeDriverPY import driver
 ```
-###### later on...
+###### inbetween these two segments of code should be your solution class with the solution function inside.
 ```py
 sol = Solution()  # this should be your solution class
 testcases = {  # create by doing: 'testcase': answer
