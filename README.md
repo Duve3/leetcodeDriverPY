@@ -1,6 +1,8 @@
 # leetcodeDriverPY
 A simple driver to allow you to use testcases in your own code :)
 
+PyPI Link: https://pypi.org/project/leetcodeDriverPY/
+
 If you would like to use this in your project, its a simple as
 just doing ```pip install leetcodeDriverPY```
 
