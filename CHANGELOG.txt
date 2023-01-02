@@ -34,3 +34,7 @@ Change Log
 - ^ Problem was related to parameter verification because of this, the "class" parameter is not verified anymore.
 - Fixed some typos throughout the package.
 
+1.0.2 (1/1/2022)
+-------------------
+- small update with minor bug fixes (typos, etc.)
+- fixed some incorrect links on the pypi.org page
