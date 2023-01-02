@@ -1,11 +1,12 @@
 from .supportClasses import ColorsClass, fillFunction, NotEnoughTestcases
 Colors = ColorsClass()
+useClass = False
 
 
 # simple driver that runs testcases
 def driver(solution: type.__class__, testcases: dict, optionalFunc=None, colorless=False) -> None:
+    global useClass
     assert isinstance(testcases, dict), "testcases must be a dictionary that is setup like this: {testcase:answer}!"
-    assert isinstance(solution, type.__class__), "Solution must be class! (If you are using direct functions then just give an empty class)"  # NOQA:E501
 
     if colorless:
         Colors.clear()
@@ -14,14 +15,14 @@ def driver(solution: type.__class__, testcases: dict, optionalFunc=None, colorle
     if optionalFunc is None:
         functions = [attr for attr in dir(solution) if callable(getattr(solution, attr)) and attr.startswith('__') is False]  # NOQA:E501
         if len(functions) == 1:
-            func = eval(f"solution.{functions[0]}")
+            func = getattr(solution, functions[0])
         else:
             func = fillFunction()
     else:
         func = optionalFunc
 
     numberCorrect = 0
-    print(f"Using function: {solution.__name__}{func.__name__}")
+    print(f"Using function: {solution.__class__.__name__}.{func.__name__}()")
     for testNum, testcase in enumerate(testcases):
         print(f"Test {testNum + 1}/{len(testcases)}: {testcase}")
         val = func(testcase)
