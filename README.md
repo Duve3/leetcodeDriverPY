@@ -1,8 +1,6 @@
 # leetcodeDriverPY
 A simple driver to allow you to use testcases in your own code :)
 
-PyPI Project: https://pypi.org/project/leetcodeDriverPY/
-
 If you would like to use this in your project, its a simple as
 just doing ```pip install leetcodeDriverPY```
 
@@ -34,4 +32,14 @@ testcases = {  # create by doing: 'testcase': answer
 driver(sol, testcases, optionalFunc=sol.IntToRoman)
 # ^ optionalFunc should be your function REFERENCE! (ex: sol.IntToRoman)
 # You shouldn't actually call the function.
+```
+###### If you are having issues with the colors, OR just do not like them you can disable them with the "colorless" parameter
+```py
+# this code is just the code from above but changed to use colorless
+sol = Solution()  # this should be your solution class
+testcases = {  # create by doing: 'testcase': answer
+    'answer': 'correct_solution',
+}
+driver(sol, testcases, optionalFunc=sol.IntToRoman, colorless=True)  
+# ^ colorless is False by default so if you want to disable colors you would set it to true.
 ```

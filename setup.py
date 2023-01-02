@@ -10,11 +10,12 @@ classifiers = [
 
 setup(
     name='leetcodeDriverPY',
-    version='0.0.3',
+    version='1.0.0',
     description='A simple library to help people run Leetcode testcases without the Leetcode online IDE.',
     long_description_content_type='text/markdown',
     long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),
-    url='https://github.com/Duve3/leetcodeDriverPY',
+    github='https://github.com/Duve3/leetcodeDriverPY',
+    issue_tracker='https://github.com/Duve3/leetcodeDriverPY/issues',
     author='Duve3',
     author_email='',
     license='MIT',

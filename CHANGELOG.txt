@@ -14,10 +14,17 @@ Change Log
 - I actually did stuff???
 - Removed legacy code.
 - Added verification to ensure that the correct parameters are filled.
-- Separated the big __init__ file into some smaller files.
+- Separated the big &#95;__init&#95;__ file into some smaller files.
 - Changed the error text from FunctionNotFound.
 - Added "optionalFunc" parameter, incase you needed to give a direct reference to your function.
 - Updated the README.md to show how to use the optionalFunc parameter.
 - Added a print statement to inform you of what function is being used.
 - Added a NotEnoughTestcases Error.
 - Added a check to confirm that len(testcases) > 1 if it fails then it raises NotEnoughTestcases.
+
+
+1.0.0 (1/1/2022) (Happy New Year!)
+- I just wanted a reason to change the version number to 1.0.0
+- Added new "colorless" optional parameter that if set to True will disable all color output.
+- Updated README.md with colorless option and fixed some text errors.
+-
