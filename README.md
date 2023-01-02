@@ -1,4 +1,5 @@
 # leetcodeDriverPY
+# **1.0.0 is broken, please use the newest version!**
 A simple driver to allow you to use testcases in your own code :)
 
 If you would like to use this in your project, its a simple as
