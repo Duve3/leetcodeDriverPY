@@ -1,12 +1,13 @@
 from .supportClasses import ColorsClass, fillFunction, NotEnoughTestcases
 Colors = ColorsClass()
-useClass = False
+version = '1.1.1'
 
 
 # simple driver that runs testcases
-def driver(solution: type.__class__, testcases: dict, optionalFunc=None, colorless=False) -> None:
-    global useClass
+def driver(sol: type.__class__, testcases: dict, optionalFunc=None, colorless=False) -> None:
     assert isinstance(testcases, dict), "testcases must be a dictionary that is setup like this: {testcase:answer}!"
+    assert isinstance(sol, type.__class__), "solution must be the original class! Not an instance."
+    solution = sol()
 
     if colorless:
         Colors.clear()
@@ -22,6 +23,7 @@ def driver(solution: type.__class__, testcases: dict, optionalFunc=None, colorle
         func = optionalFunc
 
     numberCorrect = 0
+    print(f"leetcodeDriverPY v{version}")
     print(f"Using function: {solution.__class__.__name__}.{func.__name__}()")
     for testNum, testcase in enumerate(testcases):
         print(f"Test {testNum + 1}/{len(testcases)}: {testcase}")
@@ -34,10 +36,9 @@ def driver(solution: type.__class__, testcases: dict, optionalFunc=None, colorle
             print(f"{Colors.WARNING}Test {testNum + 1}/{len(testcases)} FAILED.{Colors.ENDC}")
         print("\n\n")
 
-    print(f"{Colors.BOLD}")  # make everything from the next text bold.
     if numberCorrect == len(testcases):
-        print(f"{Colors.OKGREEN}\n\n*****\nALL SUCCESSFUL\n*****{Colors.ENDC}")
-    elif numberCorrect > len(testcases) - 2:
-        print(f"{Colors.WARNING}\n\n*****\n{numberCorrect}/{len(testcases)} Successful\n*****{Colors.ENDC}")
+        print(f"{Colors.BOLD}{Colors.OKGREEN}\n\n*****\nALL SUCCESSFUL\n*****{Colors.ENDC}")
+    elif numberCorrect > len(testcases) // 2:
+        print(f"{Colors.BOLD}{Colors.WARNING}\n\n*****\n{numberCorrect}/{len(testcases)} Successful\n*****{Colors.ENDC}")
     else:
-        print(f"{Colors.FAIL}\n\n*****\n{numberCorrect}/{len(testcases)} Successful\n*****{Colors.ENDC}")
+        print(f"{Colors.BOLD}{Colors.FAIL}\n\n*****\n{numberCorrect}/{len(testcases)} Successful\n*****{Colors.ENDC}")

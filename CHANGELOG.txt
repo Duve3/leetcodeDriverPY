@@ -38,3 +38,17 @@ Change Log
 -------------------
 - small update with minor bug fixes (typos, etc.)
 - fixed some incorrect links on the pypi.org page
+
+1.1.0 (1/2/2022)
+-------------------
+- Fixed bold adding extra lines for no reason.
+- Changed how classes are now given, this allows a more streamlined process of testing.
+- ^ More info in the README
+- Removed useless declarations
+- Changed the FAILED color to only show when over HALF of the testcases failed instead of just 2
+- Added links to PyPI page
+- + some minor changes.
+
+1.1.1 (1/2/2022)
+-------------------
+- Fixed bugs
